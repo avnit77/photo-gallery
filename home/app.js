@@ -1,20 +1,36 @@
-
 import renderImage from './render-image.js';
 import images from '../data/images.js';
 import htmlToDOM from '../util/html-to-DOM.js';
 
 const list = document.getElementById('images');
-const filter = document.getElementById('filter');
+const filterImage = document.getElementById('filter');
 
-populateList();
+filterImage.addEventListener('change', () => {
+    const filter = filterImage.value;
+    let filteredImages = null;
 
-filter.addEventListener('change', () => {
-    populateList();
+    if (!filter) {
+        filteredImages = images;
+    }
+    else {
+        filteredImages = images.filter(image => {
+            return image.keyword === filter;
+        });
+    }
+
+    populateList(filteredImages);
 });
 
-function populateList() {
-    images.forEach(image => {
-        const dom = htmlToDOM(renderImage(image));
+populateList(images);
+
+function populateList(imagesToRender) {
+    while (list.lastElementChild) {
+        list.lastElementChild.remove();
+    }
+
+    imagesToRender.forEach(image => {
+        const html = renderImage(image);
+        const dom = htmlToDOM(html);
         list.appendChild(dom);
     });
 }

@@ -4,13 +4,13 @@ export default function renderImage(image) {
         <li>
             <div class="info-container">
                 <h2>${image.title}</h2>
-                <p class="image-type">${image.keyword}</p>
+                <p class="image-keyword">${image.keyword}</p>
             </div>
             <div class="image-container">
                 <img src="${image.url}" alt="${image.title}"/>
                 <p>A unicorn and a narwhal nuzzling their horns</p>
             </div>
-            <p class="horns">${image.horns}</p>
+            <p class="horns"> Number of horns: ${image.horns}</p>
         </li>
     `;
 

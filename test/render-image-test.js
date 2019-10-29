@@ -15,7 +15,7 @@ test('renders image string', assert => {
                 <img src="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg" alt="UniWhal"/>
                 <p>A unicorn and a narwhal nuzzling their horns</p>
             </div>
-            <p class="horns">1</p>
+            <p class="horns"> Number of horns: 1</p>
         </li>
     `;
 
