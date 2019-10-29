@@ -9,7 +9,7 @@ test('renders image string', assert => {
         <li>
             <div class="info-container">
                 <h2>UniWhal</h2>
-                <p class="image-type">narwhal</p>
+                <p class="image-keyword">narwhal</p>
             </div>
             <div class="image-container">
                 <img src="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg" alt="UniWhal"/>
